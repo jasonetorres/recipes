@@ -1,103 +1,59 @@
-# Recipe Finder
+# Christmas Cookie Recipe Finder
 
-For the Datastax 12 Days of Codemas, I decided to create a simple React application that allows users to find recipes based on two ingredients. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), and features Datastax products AstraDB and Langflow to create the database for recipe generation.
+## Overview
+The Christmas Cookie Recipe finder was built for the 12 Days of Codemas event by Datastax. It is a web application built with React that allows users to search for delicious cookie recipes. This application leverages AstraDB as its backend to store and retrieve recipe data efficiently.
 
 ## Features
+- **Search for Cookie Recipes**: Users can enter keywords to find cookie recipes that match their search criteria.
+- **Recipe Display**: The application displays a list of recipes based on the search results, allowing users to select and view detailed information about each recipe.
+- **Responsive Design**: The application is designed to be user-friendly and responsive, ensuring a great experience on both desktop and mobile devices.
 
-- **Ingredient Form**: Users can input two ingredients to search for recipes.
-- **API Integration**: The application fetches recipes from an external API using the provided ingredients.
-- **AstraDB**: Utilizes Datastax AstraDB for storing and retrieving recipe data efficiently.
-- **Langflow**: Implements Langflow for natural language processing to enhance recipe search capabilities.
+## Technologies Used
+- **React**: A JavaScript library for building user interfaces.
+- **AstraDB**: A cloud-native database service that provides a scalable and reliable backend for storing recipe data.
+- **Axios**: A promise-based HTTP client for making requests to the AstraDB API.
 
 ## Getting Started
 
 ### Prerequisites
-
-Ensure you have Node.js and npm installed on your machine. You can download them from [nodejs.org](https://nodejs.org/).
+- Node.js and npm installed on your machine.
+- An AstraDB account with a keyspace set up for storing cookie recipes.
 
 ### Installation
-
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jasonetorres/recipes.git
+   git clone https://github.com/yourusername/cookie-recipe-search-tool.git
+   cd cookie-recipe-search-tool
    ```
-2. Navigate to the project directory:
-   ```bash
-   cd recipes
-   ```
-3. Install the dependencies:
+
+2. Install the dependencies:
    ```bash
    npm install
    ```
 
-### Running the Application
+3. Set up environment variables:
+   Create a `.env` file in the root of the project and add your AstraDB credentials:
+   ```plaintext
+   REACT_APP_ASTRA_DB_TOKEN=your_astra_db_token
+   REACT_APP_ASTRA_DB_KEYSPACE=your_keyspace_name
+   ```
 
-To start the application in development mode, run:
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-```bash
-npm start
-```
+5. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload if you make edits.
+## Usage
+- Enter a keyword in the search bar to find cookie recipes.
+- Click on a recipe to view its details.
 
-### Building for Production
-
-To build the app for production, run:
-
-```bash
-npm run build
-```
-
-This will create a `build` folder with the production build of your app.
-
-## Project Structure
-
-- **src/App.js**: Main application component where the `fetchRecipes` function is defined.
-  ```javascript:src/App.js
-  startLine: 1
-  endLine: 19
-  ```
-
-- **src/components/IngredientForm.js**: Component for the ingredient input form.
-  ```javascript:src/components/IngredientForm.js
-  startLine: 1
-  endLine: 35
-  ```
-
-- **src/index.js**: Entry point of the application.
-  ```javascript:src/index.js
-  startLine: 1
-  endLine: 17
-  ```
-
-- **public/index.html**: HTML template for the application.
-  ```html:public/index.html
-  startLine: 1
-  endLine: 43
-  ```
-
-## Styling
-
-The application uses CSS for styling. The main styles are located in:
-
-- **src/components/IngredientForm.css**: Styles for the ingredient form.
-  ```css:src/components/IngredientForm.css
-  startLine: 1
-  endLine: 49
-  ```
-
-## Testing
-
-To run tests, use:
-
-```bash
-npm test
-```
+## Contributing
+Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
-
-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Thanks and Merry Christmas.
